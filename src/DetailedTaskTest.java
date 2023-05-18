@@ -26,9 +26,8 @@ public class DetailedTaskTest extends base {
 		//AndroidUiAutomater
 		
 		//Isi Judul Task
-		WebElement isiTask = driver.findElementByAndroidUIAutomator("text(\"Enter Task Here\")");
-		isiTask.click();
-		isiTask.sendKeys("Buat Task Dengan Detail");
+		driver.findElementByXPath("//android.widget.EditText[@text='Enter Task Here']").sendKeys("Buat Task Dengan Detail");
+		
 		
 		//Isi Tanggal
 		
@@ -58,9 +57,7 @@ public class DetailedTaskTest extends base {
 		
 		driver.findElementByXPath("//*[@content-desc='Add']").click();
 		
-		WebElement buatKategori = driver.findElementByAndroidUIAutomator("text(\"Enter List Name\")");
-		buatKategori.click();
-		buatKategori.sendKeys("UASKPL");
+		driver.findElementByXPath("//android.widget.EditText[@text='Enter List Name']").sendKeys("UASKPL");
 		driver.findElementByAndroidUIAutomator("text(\"ADD\")").click();
 		
 		//Menyimpan Task
